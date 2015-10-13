@@ -12,13 +12,13 @@ public class Main {
     public static void main(String args[]) {
 
         get("/", (request, response) -> {
-            return new ModelAndView(null, "root.ftl");
+            return new ModelAndView(null, "car.ftl");
         }, new FreeMarkerEngine());
 
         post("/", ((request, response) -> {
             LOG.info("------> " + request.body());
 
-            return new ModelAndView(null, "root.ftl");
+            return new ModelAndView(null, "car.ftl");
         }), new FreeMarkerEngine());
 
     }
